@@ -1,0 +1,478 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Monserrat:400,700|Outfit:400,700|Overpass:400,700|Nato:400,700|Roboto:400,700');
+
+*{
+    margin: 0;
+    padding:0;
+}
+
+.body-container{
+    height: available;
+}
+
+.body-container .landingPage{
+    position: relative;
+    height: 100vh;
+}
+
+.landingPage .foregroundText{
+    z-index: 3;
+    position: absolute;
+    left: 50%;
+    text-align: center; /* Center the text within the container */
+    top:50%;
+    transform: translate(-50% , -50%);
+}
+.landingPage .foregroundText .teslaLogo{
+    width: 180px;
+    height: 25px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: fill;
+}
+
+.landingPage .foregroundText .productName{
+    letter-spacing: 15px;
+    color: white;
+    margin-top: 10px;
+    font-size: 80px;
+    top: 10px;
+    font-family: Outfit;
+}
+
+.landingPage .foregroundText p{
+    font-size: 20px;
+    font-family: Outfit;
+    color: #989898;
+}
+
+.landingPage .navBar{
+    display: inline-block;
+}
+.landingPage .menulist{
+    position:absolute;
+    z-index: 3;
+    left: 50%;
+    transform: translateX(-50%);
+    top:20px;
+    padding: 0;
+    margin: 0;
+
+}
+
+.landingPage .menulist .listItem {
+    display: inline;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 3;
+    position: relative;
+}
+
+.landingPage .menulist .listItem a::after {
+    content: '';
+    position: absolute;
+    overflow-x: hidden;
+    bottom: -10px;
+    left: 0;
+    z-index: 2;
+    right: 0;
+    height: 3px;
+    width: 0%;
+    background-color: red;
+    transition: width 0.6s;
+}
+
+.landingPage .menulist .listItem:not(:first-child){
+    margin-left: 20px;
+}
+
+.landingPage .menulist .listItem a:hover::after {
+    width: 100%;
+    margin-top: 10px;
+
+}
+
+.landingPage .menulist .listItem a{
+    text-decoration: none;
+    color: #e1e1e1;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: Outfit;
+    transition: font-size 0.4s;
+}
+
+.landingPage .menulist  .listItem a:hover{
+    font-size: 20px;
+    color: white;
+}
+
+.body-container .landingPage img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+}
+
+.body-container .landingPage::after{
+    content : "";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    top:0;
+    z-index: 2;
+}
+
+.landingPage .navBar .logo{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 3;
+}
+
+.landingPage .navBar .logo .teslaLogo{
+    width: 180px;
+    height: 25px;
+    object-fit: fill;
+    margin-left: 20px;
+}
+
+.body-container .productsContainer{
+    position: relative;
+    height: 350px;
+    width: 100%;
+    background-color: black;
+    display: inline-flex;
+    justify-content: space-around;
+    vertical-align: center;
+    align-items: center;
+}
+
+.body-container .productsContainer:only-child{
+    margin-top: 10px;
+}
+
+.body-container .productsContainer .products{
+    align-items: center;
+    text-align: center;
+}
+
+.body-container .productsContainer .products img{
+    width: 167px;
+    height: 100px;
+    object-fit: cover;
+}
+.body-container .productsContainer .products .productText h2{
+    font-size: 17px;
+    letter-spacing: 4px;
+    margin-top: 20px;
+}
+
+.body-container .productsContainer .products  p{
+    font-size: 14px;
+    color: #989898;
+}
+.body-container .productsContainer .products  h2,p{
+    color:white;
+    margin-top: 7px;
+    font-family: Outfit;
+}
+
+.body-container .productsContainer .products button{
+    margin-top: 22px;
+    padding:10px 30px;
+    background-color: #2F74C5;
+    color: white;
+    font-family: Outfit;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.body-container .productBoardDescription{
+    z-index: 10;
+    padding-bottom: 30px;
+    height: available;
+    position: relative;
+    width: 100%;
+    vertical-align: center;
+    text-align: center;
+    align-items: center;
+}
+
+.body-container .productBoardDescription .productDes{
+    position: absolute;
+    top: 50px;
+    left:50%;
+    transform : translate(-50%,0%);
+}
+
+.body-container .productBoardDescription .productDes H1,p{
+    color: black;
+    font-family: Outfit;
+}
+.body-container .productBoardDescription .productDes H1{
+    letter-spacing: 4px;
+    font-size: 43px;
+    font-weight: 1000;
+    font-family: Overpass;
+}
+.body-container .productBoardDescription .productDes p{
+    color: #757575;
+    margin-top: 5px;
+}
+
+.body-container .productBoardDescription .productDes img{
+    margin-top: 6px;
+    width: 1000px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.body-container .productSpecsContainer{
+    display: inline-flex;
+    justify-content: space-around;
+    vertical-align: center;
+    margin-top: 460px;
+    gap: 120px;
+}
+.body-container .productSpecsContainer .productSpecs{
+    width: auto;
+    height: 200px;
+    padding: 10px 120px;
+    font-family: Outfit;
+}
+
+.body-container .productSpecsContainer .productSpecs:first-child{
+    border-right: 2px solid #e0e0e0;
+    height: 100%;
+}
+
+.body-container .productSpecsContainer .productSpecs:last-child{
+    border-left: 2px solid #e0e0e0;
+    height: 100%;
+}
+.body-container .productSpecsContainer .productSpecs .productSpecsInfo{
+    color: #757575;
+}
+
+
+.fade-in {
+    opacity: 0;
+    transform: translateX(50px); /* Adjust the initial position as needed */
+    transition: opacity 0.8s ease-in, transform 0.6s ease-in;
+}
+
+.fade-in.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in.active >* {
+    transition-delay: 2.4s; /* Adjust the delay time as needed */
+}
+
+.productBoardDescription .productButton{
+    left: 50%;
+    transform: translate(-50%,-150%);
+    position: absolute;
+}
+.productBoardDescription .productButton .btn{
+    padding: 10px 45px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.productBoardDescription .productButton .btn-1{
+    border : 1px solid #000000;
+    color: black;
+    font-weight: 800;
+    font-family: Outfit;
+    background-color: transparent;
+
+}
+.productBoardDescription .productButton .btn-2{
+    color: white;
+    font-family: Outfit;
+    background-color: #000000;
+
+}
+
+.body-container .itemAlpha{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: #000000;
+    display: inline-flex;
+    justify-content: space-around;
+    vertical-align: center;
+    align-items: center;
+}
+.body-container .itemAlpha img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+}
+
+.body-container .itemAlpha::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    top:0;
+    z-index: 2;
+
+}
+.body-container .itemAlpha .textAlpha{
+    bottom: 100px;
+    left: 80px;
+    position: absolute;
+    z-index: 3;
+ }
+
+.body-container .itemAlpha .textAlpha H1{
+    font-size: 60px;
+    color:white;
+    margin-top: 10px;
+    font-family: Outfit;
+}
+.body-container .itemAlpha .textAlpha p{
+    font-size: 20px;
+    color: #7e7e7e;
+    font-family: Outfit;
+}
+
+.body-container .itemAlpha .textAlpha .btn{
+    font-size: 24px;
+    color:white;
+    font-family: Outfit;
+    margin-top: 20px;
+    font-weight: 800;
+}
+
+.body-container .itemAlpha .textAlpha .line{
+    width: 250px;
+    height: 7px;
+    background-color: #f53838;
+}
+.body-container .itemBeta{
+    height: 500px;
+    align-items: center;
+    vertical-align: center;
+    position: relative;
+}
+
+.body-container .itemBeta .teslaAdaptive{
+    position: absolute;
+    right: 120px;
+    top:50%;
+    transform: translateY(-50%);
+
+    width: 450px;
+    height: 250px;
+    object-fit: cover;
+}
+.body-container .itemBeta .teslaLogo{
+    object-fit: contain;
+    margin-top: 90px;
+    margin-left: 50px;
+    width: 150px;
+    height: 70px;
+}
+.body-container .itemBeta p{
+    font-weight: 800;
+    margin-left: 50px;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    font-family: Overpass;
+    font-size: 40px;
+}
+.body-container .itemBeta p span{
+    font-weight: 800;
+    font-family: Outfit;
+    font-size: 60px;
+}
+.body-container .itemGamma .itemGammaBg{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+}
+
+.body-container .itemGamma{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: #000000;
+    display: inline-flex;
+    justify-content: space-around;
+    vertical-align: center;
+    align-items: center;
+}
+
+.body-container .itemGamma::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    top:0;
+    z-index: 2;
+
+}
+.body-container .itemGamma .teslaGammaLogo{
+    position: absolute;
+    width: 180px;
+    height: 25px;
+    left: 40px;
+    top: 60px;
+    z-index: 5;
+    object-fit: fill;
+}
+
+.body-container .itemGamma p{
+    position: absolute;
+    font-size: 90px;
+    font-family: Outfit;
+    font-weight: 800;
+    color: white;
+    left: 40px;
+    top: 80px;
+    z-index: 5;
+}
+
+.body-container .itemGamma table{
+    position: absolute;
+    left: 40px;
+    z-index: 5;
+    border-spacing: 20px;
+    font-family: Outfit;
+    font-size: 20px;
+    bottom: 150px;
+    color: white;
+    font-weight: 800;
+}
+
+.body-container .itemGamma table .model{
+    font-weight: 400;
+    letter-spacing: 2px;
+
+}
+.body-container .itemGamma table .price{
+    font-weight: 800;
+    margin-left: 20px;
+
+}
+
+.itemOmega{
+    width: 100%;
+    height: 1000px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-image: url("res/img/chargingStation.png");
+}
